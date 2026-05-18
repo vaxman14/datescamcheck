@@ -1,0 +1,9 @@
+{
+  "name": "datescamcheck",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Free reverse-image dating scam checker — static site + Netlify function.",
+  "engines": {
+    "node": ">=18"
+  }
+}
