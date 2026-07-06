@@ -106,6 +106,11 @@
   /* ---------- Check button ---------- */
   checkBtn.addEventListener("click", function () {
     clearMessage();
+    var agree = document.getElementById("agree");
+    if (!agree || !agree.checked) {
+      showMessage("Please read and agree to the Terms of Use before running a check.", "error");
+      return;
+    }
     resultArea.innerHTML = "";
     if (mode === "url") runUrlCheck();
     else runFileCheck();
@@ -153,7 +158,7 @@
     // Send the user to Google Lens, which accepts direct uploads.
     resultArea.innerHTML =
       '<div class="card">' +
-        '<div class="notice info">Uploaded photos are searched manually. Google Lens lets you upload this exact photo and see where it appears. Use the warning signs on the ' +
+        '<div class="notice info">Next step: Google Lens. Upload this exact photo there and it shows everywhere the image appears online, the fastest way to spot a stolen or fake profile pic. Then use the warning signs on the ' +
         '<a href="/how-it-works.html">How It Works</a> page to read the results.</div>' +
         '<div class="btn-row"><a class="btn" href="https://lens.google.com/" target="_blank" rel="noopener">🔍 Open Google Lens to search</a></div>' +
         '<div class="btn-row"><a class="btn secondary" href="https://images.google.com/" target="_blank" rel="noopener">Or use Google Images</a></div>' +

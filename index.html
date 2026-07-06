@@ -87,12 +87,17 @@
         <div class="hint">JPG or PNG, up to 5 MB</div>
       </div>
       <input type="file" id="fileInput" accept="image/png,image/jpeg" hidden />
-      <div class="notice tip">Uploaded photos can't be auto-checked (the photo needs a public web address). We'll open Google Lens so you can search it manually — it's quick and free.</div>
+      <div class="notice tip">Uploaded a photo? We'll run it through Google Lens, the same reverse-image search used to trace where a photo really came from. Free, takes a few seconds, no account needed.</div>
     </div>
 
     <div class="preview" id="preview">
       <img id="previewImg" alt="Photo preview" />
     </div>
+
+    <label for="agree" style="display:flex;align-items:flex-start;gap:8px;margin:14px 0 6px;font-size:.9rem;color:#5a6a82;text-align:left;cursor:pointer">
+      <input type="checkbox" id="agree" style="margin-top:3px;flex:0 0 auto" />
+      <span>I agree to the <a href="/terms.html">Terms of Use</a> and understand this is a free tool for my own safety, provided as-is with no guarantee, and not for spying on, tracking, or identifying anyone.</span>
+    </label>
 
     <div class="btn-row">
       <button class="btn" id="checkBtn" type="button">🔍 Check this profile</button>
